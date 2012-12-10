@@ -6,6 +6,10 @@ Integrating Tap for Tap into your app is usually really easy. Add our library, `
 
 If you are not displaying TapForTap ads then you only need to call `+[TapForTap initializeWithAPIKey: @"YOUR API KEY"]` once when your app starts up, typically in the `application:didFinishLaunchingWithOptions:` method of your app delegate.
 
+## Video Walkthrough ##
+
+Watch a video that shows how to implement Tap for Tap from start to finish [here](http://www.youtube.com/watch?feature=player_embedded&v=LS7DEvITf7Y&hd=1).
+
 # Instructions #
 
 ## Step 1: Add Tap for Tap to your project. ##
