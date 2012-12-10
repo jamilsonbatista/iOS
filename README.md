@@ -12,7 +12,7 @@ If you are not displaying TapForTap ads then you only need to call `+[TapForTap 
 
 Add the `TapForTap` folder to your project by dragging and dropping it into Xcode, or selecting File → Add Files to "Your App Name". Have Xcode create groups for the added files and copy them into your project.
 
-![](http://github.com/tapfortap/Documentation/blob/master/images/xcode-01.png?raw=true)
+![](https://raw.github.com/tapfortap/iOS/master/images/xcode-01.png)
 
 ## Step 2: Add required frameworks ##
 
@@ -26,12 +26,12 @@ In the project explorer on the left side of Xcode 4:
 - Expand Link Binaries With Libraries.
 - Click the + button.
 
-![](http://github.com/tapfortap/Documentation/blob/master/images/xcode-02a.png?raw=true)
+![](https://raw.github.com/tapfortap/iOS/master/images/xcode-02.png)
 
 - Select SystemConfiguration.framework.
 - Click the Add button.
 
-![](http://github.com/tapfortap/Documentation/blob/master/images/xcode-02b.png?raw=true)
+![](https://raw.github.com/tapfortap/iOS/master/images/xcode-03.png)
 
 Repeat the above steps for AdSupport.framework.
 
