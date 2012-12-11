@@ -30,12 +30,12 @@ In the project explorer on the left side of Xcode 4:
 - Expand Link Binaries With Libraries.
 - Click the + button.
 
-![](https://raw.github.com/tapfortap/iOS/master/images/xcode-02.png)
+![](https://raw.github.com/tapfortap/iOS/master/images/xcode-02a.png)
 
 - Select SystemConfiguration.framework.
 - Click the Add button.
 
-![](https://raw.github.com/tapfortap/iOS/master/images/xcode-03.png)
+![](https://raw.github.com/tapfortap/iOS/master/images/xcode-02b.png)
 
 Repeat the above steps for AdSupport.framework.
 
