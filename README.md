@@ -153,9 +153,12 @@ App wall delegates implement the `TapForTapAppWallDelegate` protocol which has o
 - (void) tapForTapAppWallWasDismissed;
 ```
 
+
 ___
 ======
 # Footer #
+
+## [Back To Documentaion](http://tapfortap.github.com/Documentation/) ##
 
 ### *Support* ###
 Things don't always go according to plan. If you hit a snag somewhere and need a hand don't hesitate to get in touch with us at [support@tapfortap.com](mailto:support@tapfortap.com) or on Zendesk [here](https://tapfortap.zendesk.com/anonymous_requests/new).
