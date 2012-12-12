@@ -1,5 +1,9 @@
 # Android - SDK Implementation #
 
+
+## Current Version ##
+**2.1.0** - [See Changelog](https://github.com/tapfortap/iOS/blob/master/ios-changelog.md)
+
 ## General Information ##
 
 Integrating Tap for Tap into your app is usually really easy. Add our library, `libTapForTap.a`, to your iOS project, add required frameworks, initialize with your API key, and then add a `TapForTapAdView` to your view hierarchy or display an interstitial or app wall. That's it!
