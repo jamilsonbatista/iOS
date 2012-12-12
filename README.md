@@ -1,4 +1,4 @@
-# Android - SDK Implementation #
+# iOS - SDK Implementation #
 
 
 ## Current Version ##
