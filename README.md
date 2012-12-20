@@ -4,6 +4,8 @@
 ## Current Version ##
 **2.1.0** - [See Changelog](https://github.com/tapfortap/iOS/blob/master/ios-changelog.md)
 
+Supports iOS 4.3 and up on ARMv7 (iPhone 3GS and up, iPad 2 and up, iPod touch 3rd generation and up)
+
 ## General Information ##
 
 Integrating Tap for Tap into your app is usually really easy. Add our library, `libTapForTap.a`, to your iOS project, add required frameworks, initialize with your API key, and then add a `TapForTapAdView` to your view hierarchy or display an interstitial or app wall. That's it!
