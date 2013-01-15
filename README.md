@@ -1,4 +1,3 @@
-iOS
-===
+# TapForTap iOS SDK
 
-Native iOS SDK
+See http://tapfortap.com/developer#documentation

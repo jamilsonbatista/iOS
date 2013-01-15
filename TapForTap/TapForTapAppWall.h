@@ -20,6 +20,7 @@
 + (void) prepare;
 + (BOOL) isReady;
 + (void) setDelegate: (id<TapForTapAppWallDelegate>) delegate;
++ (id<TapForTapAppWallDelegate>) delegate;
 + (void) showWithRootViewController: (UIViewController *)rootViewController;
 
 - (BOOL) isReady;

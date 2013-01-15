@@ -20,6 +20,7 @@
 + (void) prepare;
 + (BOOL) isReady;
 + (void) setDelegate: (id<TapForTapInterstitialDelegate>) delegate;
++ (id<TapForTapInterstitialDelegate>) delegate;
 + (void) showWithRootViewController: (UIViewController *)rootViewController;
 
 - (BOOL) isReady;

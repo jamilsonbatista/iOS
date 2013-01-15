@@ -12,7 +12,7 @@
 #import "TapForTapAppWall.h"
 #import "TapForTapInterstitial.h"
 
-#define TFT_SDK_VERSION @"2.1.0"
+#define TFT_SDK_VERSION @"2.1.1"
 
 typedef enum {
     NONE = -1,
