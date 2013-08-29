@@ -15,20 +15,20 @@
 {
     int width = self.view.frame.size.width;
     
-    TapForTapAdView* adView = [[TapForTapAdView alloc] initWithFrame:CGRectMake(width / 2 - 320 / 2, 0, 320, 50) delegate:self];
+    TapForTapBannerAd* bannerAd = [TapForTapBannerAd createAndShowAdWithFrame:CGRectMake(width / 2 - 320 / 2, 0, 320, 50) delegate:self];
     
     UIButton* showInterstitialButton = [[UIButton alloc] initWithFrame:CGRectMake(width / 2 - 200 / 2, 55, 200, 100)];
     [showInterstitialButton addTarget:self action:@selector(showInterstitial) forControlEvents:UIControlEventTouchUpInside];
     [showInterstitialButton setTitle:@"Show Interstitial" forState:UIControlStateNormal];
-    [TapForTapInterstitial prepareWithDelegate:self];
+    self.interstitialAd = [TapForTapInterstitialAd createAndLoadWithDelegate:self];
     
     UIButton* showAppWallButton = [[UIButton alloc] initWithFrame:CGRectMake(width / 2 - 200 / 2, 155, 200, 100)];
     [showAppWallButton addTarget:self action:@selector(showAppWall) forControlEvents:UIControlEventTouchUpInside];
     [showAppWallButton setTitle:@"Show AppWall" forState:UIControlStateNormal];
-    [TapForTapAppWall prepareWithDelegate:self];
+    self.appWallAd = [TapForTapAppWallAd createAndLoadWithDelegate:self];
     
 
-    [self.view addSubview:adView];
+    [self.view addSubview:bannerAd];
     [self.view addSubview:showAppWallButton];
     [self.view addSubview:showInterstitialButton];
     [super viewDidLoad];
@@ -40,57 +40,66 @@
 }
 
 - (void) showInterstitial {
-    [TapForTapInterstitial showWithRootViewController:self];
+    [self.interstitialAd showWithViewController:self];
 }
 
 - (void) showAppWall {
-    [TapForTapAppWall showWithRootViewController:self];
+    [self.appWallAd showWithViewController:self];
 }
 
-- (void) tapForTapAdViewDidReceiveAd: (TapForTapAdView *)adView {
-    NSLog(@"AdView didReceiveAd");
+- (void)tapForTapBannerAdDidReceiveAd:(TapForTapBannerAd *)bannerAd {
+    NSLog(@"tapForTapBannerAdDidReceiveAd");
 }
-- (void) tapForTapAdView: (TapForTapAdView *)adView didFailToReceiveAd: (NSString *)reason {
-    NSLog(@"AdView didFailToReceiveAd: %@", reason);
-    
-}
-- (void) tapForTapAdViewWasTapped: (TapForTapAdView *)adView {
-    NSLog(@"AdView wasTapped");
+
+- (void)tapForTapBannerAd:(TapForTapBannerAd *)bannerAd didFail:(NSString *)reason {
+    NSLog(@"tapForTapBannerAd:didFail");
     
 }
 
-- (void) tapForTapInterstitialDidReceiveAd {
-    NSLog(@"Interstitial didReceiveAd");
-    
-}
-- (void) tapForTapInterstitialDidShow {
-    NSLog(@"Interstitial didShow");
-    
-}
-- (void) tapForTapInterstitialWasDismissed {
-    NSLog(@"Interstitial wasDismissed");
-    
-}
-- (void) tapForTapInterstitialFailedToDownload: (NSString *) reason {
-    NSLog(@"Interstitial didFailToDownload: %@", reason);
-    
+- (void)tapForTapBannerAdWasTapped:(TapForTapBannerAd *)bannerAd {
+    NSLog(@"tapForTapBannerAdWasTapped");
 }
 
-- (void) tapForTapAppWallDidReceiveAd {
-    NSLog(@"AppWall didReiceAd");
-    
+
+- (void)tapForTapInterstitialDidReceiveAd:(TapForTapInterstitialAd *)ad {
+    NSLog(@"tapForTapInterstitialDidReceiveAd");
 }
-- (void) tapForTapAppWallDidShow {
-    NSLog(@"AppWall didShow");
-    
+
+- (void)tapForTapInterstitial:(TapForTapInterstitialAd *)ad didFail:(NSString *)reason {
+    NSLog(@"tapForTapInterstitial");
 }
-- (void) tapForTapAppWallWasDismissed {
-    NSLog(@"AppWall wasDismissed");
-    
+
+- (void)tapForTapInterstitialDidShow:(TapForTapInterstitialAd *)ad {
+    NSLog(@"tapForTapInterstitialDidShow");
 }
-- (void) tapForTapAppWallFailedToDownload: (NSString *) reason {
-    NSLog(@"AppWall didFailToDownload: %@", reason);
-    
+
+- (void)tapForTapInterstitialWasTapped:(TapForTapInterstitialAd *)ad {
+    NSLog(@"tapForTapInterstitialWasTapped");
+}
+
+- (void)tapForTapInterstitialWasDismissed:(TapForTapInterstitialAd *)ad {
+    NSLog(@"tapForTapInterstitialWasDismissed");
+}
+
+
+- (void)tapForTapAppWallDidReceiveAd:(TapForTapAppWallAd *)ad {
+    NSLog(@"tapForTapAppWallDidReceiveAd");
+}
+
+- (void)tapForTapAppWall:(TapForTapAppWallAd *)ad didFail:(NSString *)reason {
+    NSLog(@"tapForTapAppWall:didFail");
+}
+
+- (void)tapForTapAppWallDidShow:(TapForTapAppWallAd *)ad {
+    NSLog(@"tapForTapAppWallDidShow");
+}
+
+- (void)tapForTapAppWallWasTapped:(TapForTapAppWallAd *)ad {
+    NSLog(@"tapForTapAppWallWasTapped");
+}
+
+- (void)tapForTapAppWallWasDismissed:(TapForTapAppWallAd *)ad {
+    NSLog(@"tapForTapAppWallWasDismissed");
 }
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A402A3217CFA8F800128A49 /* libTapForTap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A402A2D17CFA8F800128A49 /* libTapForTap.a */; };
 		4A8807E91798A11400AB403C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8807E81798A11400AB403C /* UIKit.framework */; };
 		4A8807EB1798A11400AB403C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8807EA1798A11400AB403C /* Foundation.framework */; };
 		4A8807ED1798A11400AB403C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8807EC1798A11400AB403C /* CoreGraphics.framework */; };
@@ -17,12 +18,16 @@
 		4A8807FD1798A11400AB403C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A8807FC1798A11400AB403C /* Default@2x.png */; };
 		4A8807FF1798A11400AB403C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A8807FE1798A11400AB403C /* Default-568h@2x.png */; };
 		4A8808021798A11400AB403C /* TFTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A8808011798A11400AB403C /* TFTViewController.m */; };
-		4A8808141798A14100AB403C /* libTapForTapAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A88080F1798A14100AB403C /* libTapForTapAds.a */; };
 		4A8808161798A14E00AB403C /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8808151798A14E00AB403C /* AdSupport.framework */; };
 		4A8808181798A15300AB403C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8808171798A15300AB403C /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A402A2D17CFA8F800128A49 /* libTapForTap.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTapForTap.a; sourceTree = "<group>"; };
+		4A402A2E17CFA8F800128A49 /* TapForTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapForTap.h; sourceTree = "<group>"; };
+		4A402A2F17CFA8F800128A49 /* TapForTapAppWallAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapForTapAppWallAd.h; sourceTree = "<group>"; };
+		4A402A3017CFA8F800128A49 /* TapForTapBannerAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapForTapBannerAd.h; sourceTree = "<group>"; };
+		4A402A3117CFA8F800128A49 /* TapForTapInterstitialAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapForTapInterstitialAd.h; sourceTree = "<group>"; };
 		4A8807E51798A11400AB403C /* example-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "example-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A8807E81798A11400AB403C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4A8807EA1798A11400AB403C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -38,11 +43,6 @@
 		4A8807FE1798A11400AB403C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		4A8808001798A11400AB403C /* TFTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFTViewController.h; sourceTree = "<group>"; };
 		4A8808011798A11400AB403C /* TFTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFTViewController.m; sourceTree = "<group>"; };
-		4A88080F1798A14100AB403C /* libTapForTapAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTapForTapAds.a; sourceTree = "<group>"; };
-		4A8808101798A14100AB403C /* TapForTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapForTap.h; sourceTree = "<group>"; };
-		4A8808111798A14100AB403C /* TapForTapAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapForTapAdView.h; sourceTree = "<group>"; };
-		4A8808121798A14100AB403C /* TapForTapAppWall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapForTapAppWall.h; sourceTree = "<group>"; };
-		4A8808131798A14100AB403C /* TapForTapInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapForTapInterstitial.h; sourceTree = "<group>"; };
 		4A8808151798A14E00AB403C /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		4A8808171798A15300AB403C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -57,7 +57,7 @@
 				4A8807E91798A11400AB403C /* UIKit.framework in Frameworks */,
 				4A8807EB1798A11400AB403C /* Foundation.framework in Frameworks */,
 				4A8807ED1798A11400AB403C /* CoreGraphics.framework in Frameworks */,
-				4A8808141798A14100AB403C /* libTapForTapAds.a in Frameworks */,
+				4A402A3217CFA8F800128A49 /* libTapForTap.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,11 +123,11 @@
 		4A88080E1798A14100AB403C /* TapForTap */ = {
 			isa = PBXGroup;
 			children = (
-				4A88080F1798A14100AB403C /* libTapForTapAds.a */,
-				4A8808101798A14100AB403C /* TapForTap.h */,
-				4A8808111798A14100AB403C /* TapForTapAdView.h */,
-				4A8808121798A14100AB403C /* TapForTapAppWall.h */,
-				4A8808131798A14100AB403C /* TapForTapInterstitial.h */,
+				4A402A2D17CFA8F800128A49 /* libTapForTap.a */,
+				4A402A2E17CFA8F800128A49 /* TapForTap.h */,
+				4A402A2F17CFA8F800128A49 /* TapForTapAppWallAd.h */,
+				4A402A3017CFA8F800128A49 /* TapForTapBannerAd.h */,
+				4A402A3117CFA8F800128A49 /* TapForTapInterstitialAd.h */,
 			);
 			path = TapForTap;
 			sourceTree = "<group>";
@@ -325,6 +325,7 @@
 				4A88080D1798A11400AB403C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

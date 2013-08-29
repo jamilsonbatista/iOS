@@ -1,18 +1,15 @@
 //
-//  TapForTap.h
-//  TapForTapAds
-//
-//  Created by Sami Samhuri on 12-03-12.
-//  Copyright (c) 2012 Tap for Tap. All rights reserved.
+//  Copyright (c) 2013 Tap for Tap. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
-#import "TapForTapAdView.h"
-#import "TapForTapAppWall.h"
-#import "TapForTapInterstitial.h"
 
-#define TFT_SDK_VERSION @"2.3.3"
+#import "TapForTapBannerAd.h"
+#import "TapForTapAppWallAd.h"
+#import "TapForTapInterstitialAd.h"
+
+@class TapForTap;
 
 typedef enum {
     NONE = -1,
@@ -20,16 +17,20 @@ typedef enum {
     FEMALE = 1
 } TapForTapGender;
 
+typedef void (^TFTInitializationRequestHandler)(BOOL success, NSDictionary *reason);
 
 @interface TapForTap : NSObject
-
-+ (void) initializeWithAPIKey: (NSString *)apiKey;
++ (void)initializeWithAPIKey:(NSString *)apiKey;
++ (void)initializeWithAPIKey:(NSString *)apiKey completion:(TFTInitializationRequestHandler)handler;
++ (void)setYearOfBirth:(NSUInteger)yearOfBirth;
++ (void)setGender:(TapForTapGender)gender;
++ (void)setLocation:(CLLocation *)location;
++ (void)setUserAccountId:(NSString *)userAccountId;
++ (void)enableTestMode;
++ (void)disableTestMode;
 + (BOOL) testMode;
-+ (void) setTestMode: (BOOL)testMode;
-+ (void) setGender: (TapForTapGender)gender;
-+ (void) setAge: (NSUInteger)age;
-+ (void) setYearOfBirth: (NSUInteger)year;
-+ (void) setLocation: (CLLocation *)location;
-+ (void) setUserAccountID: (NSString *)accountId;
++ (void)enableTapForTap;
++ (void)disableTapForTap;
++ (BOOL)enabled;
 
 @end

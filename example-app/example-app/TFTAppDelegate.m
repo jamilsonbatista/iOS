@@ -24,7 +24,8 @@
     }
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
-    [TapForTap initializeWithAPIKey:@"YOUR API KEY"];
+    [TapForTap enableTestMode];
+    [TapForTap initializeWithAPIKey:@"1a5c984d14f48bcb875913fab43c54b9"];
     return YES;
 }
 
