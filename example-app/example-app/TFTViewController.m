@@ -42,7 +42,7 @@
 }
 
 - (void) showInterstitial {
-    [self.interstitial showAndLoadNextWithViewController:self];
+    [self.interstitial showAndLoadWithViewController:self];
 }
 
 - (void) showAppWall {

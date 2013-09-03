@@ -22,6 +22,6 @@
 
 - (void)load;
 - (void)showWithViewController:(UIViewController *)viewController;
-- (void)showAndLoadNextWithViewController:(UIViewController *)viewController;
+- (void)showAndLoadWithViewController:(UIViewController *)viewController;
 - (BOOL)readyToShow;
 @end
