@@ -7,7 +7,7 @@
 //
 
 #import "TFTViewController.h"
-#import "TapForTap.h"
+#import "TFTTapForTap.h"
 
 @implementation TFTViewController
 
@@ -15,20 +15,22 @@
 {
     int width = self.view.frame.size.width;
     
-    TapForTapBannerAd* bannerAd = [TapForTapBannerAd createAndShowAdWithFrame:CGRectMake(width / 2 - 320 / 2, 0, 320, 50) delegate:self];
+    TFTBanner* banner = [TFTBanner bannerWithFrame:CGRectMake(width / 2 - 320 / 2, 0, 320, 50) delegate:self];
     
-    UIButton* showInterstitialButton = [[UIButton alloc] initWithFrame:CGRectMake(width / 2 - 200 / 2, 55, 200, 100)];
+    UIButton* showInterstitialButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [showInterstitialButton addTarget:self action:@selector(showInterstitial) forControlEvents:UIControlEventTouchUpInside];
     [showInterstitialButton setTitle:@"Show Interstitial" forState:UIControlStateNormal];
-    self.interstitialAd = [TapForTapInterstitialAd createAndLoadWithDelegate:self];
+    showInterstitialButton.frame = CGRectMake(width / 2 - 200 / 2, 55, 200, 75);
+    self.interstitial = [TFTInterstitial interstitialWithDelegate:self];
     
-    UIButton* showAppWallButton = [[UIButton alloc] initWithFrame:CGRectMake(width / 2 - 200 / 2, 155, 200, 100)];
+    UIButton* showAppWallButton =[UIButton buttonWithType:UIButtonTypeRoundedRect];
     [showAppWallButton addTarget:self action:@selector(showAppWall) forControlEvents:UIControlEventTouchUpInside];
     [showAppWallButton setTitle:@"Show AppWall" forState:UIControlStateNormal];
-    self.appWallAd = [TapForTapAppWallAd createAndLoadWithDelegate:self];
+    showAppWallButton.frame = CGRectMake(width / 2 - 200 / 2, 155, 200, 75);
+    self.appWall = [TFTAppWall appWallWithDelegate:self];
     
 
-    [self.view addSubview:bannerAd];
+    [self.view addSubview:banner];
     [self.view addSubview:showAppWallButton];
     [self.view addSubview:showInterstitialButton];
     [super viewDidLoad];
@@ -40,66 +42,66 @@
 }
 
 - (void) showInterstitial {
-    [self.interstitialAd showWithViewController:self];
+    [self.interstitial showAndLoadNextWithViewController:self];
 }
 
 - (void) showAppWall {
-    [self.appWallAd showWithViewController:self];
+    [self.appWall showWithViewController:self];
 }
 
-- (void)tapForTapBannerAdDidReceiveAd:(TapForTapBannerAd *)bannerAd {
-    NSLog(@"tapForTapBannerAdDidReceiveAd");
+- (void)tftBannerDidReceive:(TFTBanner *)banner {
+    NSLog(@"tftBannerAdDidReceiveAd");
 }
 
-- (void)tapForTapBannerAd:(TapForTapBannerAd *)bannerAd didFail:(NSString *)reason {
-    NSLog(@"tapForTapBannerAd:didFail");
+- (void)tftBannerAd:(TFTBanner *)banner didFail:(NSString *)reason {
+    NSLog(@"tftBannerAd:didFail");
     
 }
 
-- (void)tapForTapBannerAdWasTapped:(TapForTapBannerAd *)bannerAd {
-    NSLog(@"tapForTapBannerAdWasTapped");
+- (void)tftBannerAdWasTapped:(TFTBanner *)banner {
+    NSLog(@"tftBannerAdWasTapped");
 }
 
 
-- (void)tapForTapInterstitialDidReceiveAd:(TapForTapInterstitialAd *)ad {
-    NSLog(@"tapForTapInterstitialDidReceiveAd");
+- (void)tftInterstitialDidReceiveAd:(TFTInterstitial *)interstitial {
+    NSLog(@"tftInterstitialDidReceiveAd");
 }
 
-- (void)tapForTapInterstitial:(TapForTapInterstitialAd *)ad didFail:(NSString *)reason {
-    NSLog(@"tapForTapInterstitial");
+- (void)tftInterstitial:(TFTInterstitial *)interstitial didFail:(NSString *)reason {
+    NSLog(@"tftInterstitial");
 }
 
-- (void)tapForTapInterstitialDidShow:(TapForTapInterstitialAd *)ad {
-    NSLog(@"tapForTapInterstitialDidShow");
+- (void)tftInterstitialDidShow:(TFTInterstitial *)interstitial {
+    NSLog(@"tftInterstitialDidShow");
 }
 
-- (void)tapForTapInterstitialWasTapped:(TapForTapInterstitialAd *)ad {
-    NSLog(@"tapForTapInterstitialWasTapped");
+- (void)tftInterstitialWasTapped:(TFTInterstitial *)interstitial {
+    NSLog(@"tftInterstitialWasTapped");
 }
 
-- (void)tapForTapInterstitialWasDismissed:(TapForTapInterstitialAd *)ad {
-    NSLog(@"tapForTapInterstitialWasDismissed");
+- (void)tftInterstitialWasDismissed:(TFTInterstitial *)interstitial {
+    NSLog(@"tftInterstitialWasDismissed");
 }
 
 
-- (void)tapForTapAppWallDidReceiveAd:(TapForTapAppWallAd *)ad {
-    NSLog(@"tapForTapAppWallDidReceiveAd");
+- (void)tftAppWallDidReceiveAd:(TFTAppWall *)appWall {
+    NSLog(@"tftAppWallDidReceiveAd");
 }
 
-- (void)tapForTapAppWall:(TapForTapAppWallAd *)ad didFail:(NSString *)reason {
-    NSLog(@"tapForTapAppWall:didFail");
+- (void)tftAppWall:(TFTAppWall *)appWall didFail:(NSString *)reason {
+    NSLog(@"tftAppWall:didFail");
 }
 
-- (void)tapForTapAppWallDidShow:(TapForTapAppWallAd *)ad {
-    NSLog(@"tapForTapAppWallDidShow");
+- (void)tftAppWallDidShow:(TFTAppWall *)appWall {
+    NSLog(@"tftAppWallDidShow");
 }
 
-- (void)tapForTapAppWallWasTapped:(TapForTapAppWallAd *)ad {
-    NSLog(@"tapForTapAppWallWasTapped");
+- (void)tftAppWallWasTapped:(TFTAppWall *)appWall {
+    NSLog(@"tftAppWallWasTapped");
 }
 
-- (void)tapForTapAppWallWasDismissed:(TapForTapAppWallAd *)ad {
-    NSLog(@"tapForTapAppWallWasDismissed");
+- (void)tftAppWallWasDismissed:(TFTAppWall *)appWall {
+    NSLog(@"tftAppWallWasDismissed");
 }
 
 @end

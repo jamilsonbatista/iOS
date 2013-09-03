@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TapForTap.h"
+#import "TFTTapForTap.h"
 
-@interface TFTViewController : UIViewController <TapForTapBannerAdDelegate, TapForTapInterstitialAdDelegate, TapForTapAppWallAdDelegate>
-@property (retain, nonatomic) TapForTapInterstitialAd *interstitialAd;
-@property (retain, nonatomic) TapForTapAppWallAd *appWallAd;
+@interface TFTViewController : UIViewController <TFTBannerDelegate, TFTInterstitialDelegate, TFTAppWallDelegate>
+@property (retain, nonatomic) TFTInterstitial *interstitial;
+@property (retain, nonatomic) TFTAppWall *appWall;
 @end

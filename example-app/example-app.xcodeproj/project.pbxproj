@@ -23,11 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A1BF98417D67B8D00B084D2 /* TFTAppWall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFTAppWall.h; sourceTree = "<group>"; };
+		4A1BF98517D67B8D00B084D2 /* TFTBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFTBanner.h; sourceTree = "<group>"; };
+		4A1BF98617D67B8D00B084D2 /* TFTInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFTInterstitial.h; sourceTree = "<group>"; };
+		4A1BF98717D67B8D00B084D2 /* TFTTapForTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFTTapForTap.h; sourceTree = "<group>"; };
 		4A402A2D17CFA8F800128A49 /* libTapForTap.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTapForTap.a; sourceTree = "<group>"; };
-		4A402A2E17CFA8F800128A49 /* TapForTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapForTap.h; sourceTree = "<group>"; };
-		4A402A2F17CFA8F800128A49 /* TapForTapAppWallAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapForTapAppWallAd.h; sourceTree = "<group>"; };
-		4A402A3017CFA8F800128A49 /* TapForTapBannerAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapForTapBannerAd.h; sourceTree = "<group>"; };
-		4A402A3117CFA8F800128A49 /* TapForTapInterstitialAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapForTapInterstitialAd.h; sourceTree = "<group>"; };
 		4A8807E51798A11400AB403C /* example-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "example-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A8807E81798A11400AB403C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4A8807EA1798A11400AB403C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -123,11 +123,11 @@
 		4A88080E1798A14100AB403C /* TapForTap */ = {
 			isa = PBXGroup;
 			children = (
+				4A1BF98417D67B8D00B084D2 /* TFTAppWall.h */,
+				4A1BF98517D67B8D00B084D2 /* TFTBanner.h */,
+				4A1BF98617D67B8D00B084D2 /* TFTInterstitial.h */,
+				4A1BF98717D67B8D00B084D2 /* TFTTapForTap.h */,
 				4A402A2D17CFA8F800128A49 /* libTapForTap.a */,
-				4A402A2E17CFA8F800128A49 /* TapForTap.h */,
-				4A402A2F17CFA8F800128A49 /* TapForTapAppWallAd.h */,
-				4A402A3017CFA8F800128A49 /* TapForTapBannerAd.h */,
-				4A402A3117CFA8F800128A49 /* TapForTapInterstitialAd.h */,
 			);
 			path = TapForTap;
 			sourceTree = "<group>";

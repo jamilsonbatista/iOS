@@ -9,12 +9,15 @@
 #import "TFTAppDelegate.h"
 
 #import "TFTViewController.h"
-#import "TapForTap.h"
+#import "TFTTapForTap.h"
 
 @implementation TFTAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [TFTTapForTap enableTestMode];
+    [TFTTapForTap initializeWithAPIKey:@"1a5c984d14f48bcb875913fab43c54b9"];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
@@ -24,8 +27,7 @@
     }
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
-    [TapForTap enableTestMode];
-    [TapForTap initializeWithAPIKey:@"1a5c984d14f48bcb875913fab43c54b9"];
+
     return YES;
 }
 
