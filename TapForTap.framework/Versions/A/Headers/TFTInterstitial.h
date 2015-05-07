@@ -49,7 +49,7 @@
 + (TFTInterstitial *)interstitialWithDelegate:(id<TFTInterstitialDelegate>) delegate __attribute__((deprecated));
 
 - (void)load __attribute__((deprecated));
-- (BOOL)readyToShow __attribute__((deprecated));
+- (BOOL)readyToShow;
 - (void)showWithViewController:(UIViewController *)viewController;
 - (void)showAndLoadWithViewController:(UIViewController *)viewController;
 
